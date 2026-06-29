@@ -1,0 +1,1 @@
+Make shure users can't go to "/dashboard" manually to prevent needing to log in
