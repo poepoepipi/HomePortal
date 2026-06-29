@@ -1,0 +1,13 @@
+body {
+    background: #0f0f0f;
+    color: #be8f32;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    text-align: center;
+}
