@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>My Dashboard</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>Loading...</title>
 </head>
 <body>
-    <div class="box">
-        <h1>HomePortal</h1>
-        <p>The server is running</p>
-    </div>
+    <p>Loading system...</p>
+
+    <script>
+        fetch("/api/session")
+            .then(res => res.json())
+            .then(data => {
+                if (data.logged_in) {
+                    window.location.href = "/dashboard";
+                } else {
+                    window.location.href = "/login";
+                }
+            });
+    </script>
 </body>
 </html>
