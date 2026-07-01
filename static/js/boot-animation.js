@@ -4704,11 +4704,11 @@ async function finishBoot() {
         if (data.logged_in) {
             window.location.href = "/dashboard";
         } else {
-            window.location.href = "/loginpage";
+            window.location.href = "/login";
         }
 
     } catch (err) {
-        window.location.href = "/loginpage";
+        window.location.href = "/login";
     }
 }
 

@@ -8,7 +8,7 @@ PASSWORD = "temporary"
 def boot():
     return render_template("boot.html")
 
-@app.route("/loginpage")
+@app.route("/login")
 def login_page():
     return render_template("login.html")
 
