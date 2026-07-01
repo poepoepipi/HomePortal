@@ -11,5 +11,17 @@
         <p>The server is probably running well</p>
         <p>Refresh the page to make sure</p>
     </div>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+    async function logout() {
+        await fetch("/api/logout", {
+            method: "POST"
+        });
+
+        window.location.href = "/loginpage";
+    }
+    </script>
+
 </body>
 </html>
