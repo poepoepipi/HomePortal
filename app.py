@@ -9,7 +9,7 @@ def boot():
     return render_template("boot.html")
 
 @app.route("/loginpage")
-def login():
+def login_page():
     return render_template("login.html")
 
 @app.route("/dashboard")
@@ -17,7 +17,7 @@ def home():
     return render_template("dashboard.html")
 
 @app.route("/api/login", methods=["POST"])
-def login():
+def api_login():
     data = request.get_json()
     password = data.get("password")
 
