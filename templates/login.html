@@ -55,21 +55,18 @@
         }
 
         const asciiArt = document.getElementById("ascii-art");
-        const threshold = 30; // Distance in pixels to trigger the change
+        const threshold = 30;
 
-        // Wrap each character in a <span>
         const wrappedText = asciiArt.textContent
             .split("")
             .map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
             .join("");
           asciiArt.innerHTML = wrappedText;
 
-          // Add event listener for mouse movement
           document.addEventListener("mousemove", (e) => {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
-            // Get all character spans
             const chars = document.querySelectorAll(".char");
 
             chars.forEach(char => {
@@ -77,12 +74,10 @@
               const charX = charRect.left + charRect.width / 2;
               const charY = charRect.top + charRect.height / 2;
 
-              // Calculate distance between mouse and character
               const distance = Math.sqrt(
                 Math.pow(mouseX - charX, 2) + Math.pow(mouseY - charY, 2)
               );
 
-              // Change style if mouse is close
               if (distance < threshold) {
                 char.style.color = "#be8f32";
                 char.style.fontWeight = "bold";
