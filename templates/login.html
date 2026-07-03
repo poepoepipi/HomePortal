@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="box">
-        <pre>                                                                                                                              
+        <pre id="ascii-art">                                                                                                                              
                                                                                                                               
                                                       #                              ###                           #          
 #:   :#                                               #           #                    #                                      
@@ -23,12 +23,11 @@
                                                                                                       :#                      
                                                                                                     :##.                      </pre>
 
-        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="password" placeholder="Password" onkeydown="handleKeyDown(event)">
 
         <button onclick="login()">Login</button>
 
         <p id="error" style="color: red;"></p>
-    </div>
 
     <script>
         async function login() {
@@ -48,6 +47,51 @@
                 document.getElementById("error").innerText = "Wrong password";
             }
         }
+
+        function handleKeyDown(event) {
+            if (event.key === "Enter") {
+                login();
+            }
+        }
+
+        const asciiArt = document.getElementById("ascii-art");
+        const threshold = 30; // Distance in pixels to trigger the change
+
+        // Wrap each character in a <span>
+        const wrappedText = asciiArt.textContent
+            .split("")
+            .map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
+            .join("");
+          asciiArt.innerHTML = wrappedText;
+
+          // Add event listener for mouse movement
+          document.addEventListener("mousemove", (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            // Get all character spans
+            const chars = document.querySelectorAll(".char");
+
+            chars.forEach(char => {
+              const charRect = char.getBoundingClientRect();
+              const charX = charRect.left + charRect.width / 2;
+              const charY = charRect.top + charRect.height / 2;
+
+              // Calculate distance between mouse and character
+              const distance = Math.sqrt(
+                Math.pow(mouseX - charX, 2) + Math.pow(mouseY - charY, 2)
+              );
+
+              // Change style if mouse is close
+              if (distance < threshold) {
+                char.style.color = "#be8f32";
+                char.style.fontWeight = "bold";
+              } else {
+                char.style.color = "";
+                char.style.fontWeight = "";
+              }
+            });
+          });
     </script>
 </body>
 </html>

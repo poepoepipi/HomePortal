@@ -1,4 +1,2 @@
 Make shure users can't go to "/dashboard" manually to prevent needing to log in.
-Change the port.
-delete the stuff u used for testing from the server
-login with enter button
+Don't code the password in the python
