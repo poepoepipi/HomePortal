@@ -3,7 +3,6 @@ body {
     color: #be8f32;
     font-family: monospace;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -16,11 +15,36 @@ body {
     font-family: monospace;
     white-space: pre;
     line-height: 1.2;
-    margin: 0 auto;
+    max-width: 80%;
 }
 
 .char {
     transition: color 0.1s, font-weight 0.1s;
+}
+
+button {
+    padding: 10px 16px;
+    font-size: 15px;
+    border: 1px solid #be8f32;
+    border-radius: 10px;
+    background: #000000;
+    color: #be8f32;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 10px auto;
+}
+
+button:hover {
+    background: #be8f32;
+    color: #000000;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 input[type="password"] {
@@ -45,28 +69,4 @@ input[type="password"]:focus {
 
 input[type="password"]::placeholder {
     color: #be8f32;
-}
-
-button {
-    padding: 10px 16px;
-    font-size: 15px;
-    border: 1px solid #be8f32;
-    border-radius: 10px;
-    background: #000000;
-    color: #be8f32;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin: 8px 0;
-}
-
-button:hover {
-    background: #be8f32;
-    color: #000000;
-    transform: translateY(-1px);
-}
-
-button:active {
-    transform: translateY(0px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
