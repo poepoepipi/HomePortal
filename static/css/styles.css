@@ -126,3 +126,28 @@ button:active {
     margin: 5px 0;
     color: blue;
 }
+
+input[type="title"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #be8f32;
+    border-radius: 10px;
+    background: #000000;
+    color: #be8f32;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(190, 143, 50, 0.15);
+    display: block;
+    margin: 10px auto;
+}
+
+input[type="title"]:focus {
+    border-color: #be8f32;
+    box-shadow: 0 0 0 4px rgba(190, 143, 50, 0.15);
+}
+
+input[type="title"]::placeholder {
+    color: #be8f32;
+}
