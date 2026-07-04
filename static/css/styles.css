@@ -127,7 +127,7 @@ button:active {
     color: blue;
 }
 
-input[type="title"] {
+input[type="text"] {
     width: 100%;
     max-width: 320px;
     padding: 12px 14px;
@@ -143,11 +143,11 @@ input[type="title"] {
     margin: 10px auto;
 }
 
-input[type="title"]:focus {
+input[type="text"]:focus {
     border-color: #be8f32;
     box-shadow: 0 0 0 4px rgba(190, 143, 50, 0.15);
 }
 
-input[type="title"]::placeholder {
+input[type="text"]::placeholder {
     color: #be8f32;
 }
