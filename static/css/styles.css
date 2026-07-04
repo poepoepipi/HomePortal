@@ -1,5 +1,5 @@
 body {
-    background: #0f0f0f;
+    background: #000000;
     color: #be8f32;
     font-family: monospace;
     display: flex;
@@ -102,7 +102,7 @@ button:active {
 .bookmark-form textarea {
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #be8f32;
 }
 
 .bookmark-form button {
@@ -110,15 +110,15 @@ button:active {
     cursor: pointer;
     border-radius: 8px;
     border: none;
-    background: #222;
-    color: white;
+    background: #000000;
+    color: #be8f32;
 }
 
 .bookmark {
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    background: #f4f4f4;
+    background: #be8f32;
 }
 
 .bookmark a {
