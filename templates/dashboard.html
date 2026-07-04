@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Dashboard</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <div class="box">
-        <h1>HomePortal</h1>
-        <p>The server is probably running well</p>
-        <p>Refresh the page to make sure</p>
-        <button onclick="logout()">Logout</button>
+
+<div class="container">
+    <h1>📌 Bookmarks</h1>
+
+    <div class="bookmark-form">
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="url" placeholder="https://example.com">
+        <textarea id="description" placeholder="Description"></textarea>
+
+        <button onclick="addBookmark()">Add Bookmark</button>
     </div>
 
-    <script>
-    async function logout() {
-        await fetch("/api/logout", {
-            method: "POST"
-        });
+    <div id="bookmarkList" class="bookmark-list"></div>
+</div>
 
-        window.location.href = "/login";
-    }
-    </script>
-
+<script src="/static/js/script.js"></script>
 </body>
 </html>

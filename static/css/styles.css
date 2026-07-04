@@ -84,3 +84,45 @@ button:active {
     margin: 10px auto;
     display: block;
 }
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.bookmark-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bookmark-form input,
+.bookmark-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.bookmark-form button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.bookmark {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f4f4f4;
+}
+
+.bookmark a {
+    display: block;
+    margin: 5px 0;
+    color: blue;
+}
