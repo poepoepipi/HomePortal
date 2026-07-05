@@ -29,64 +29,6 @@
 
         <p id="error" style="color: red;"></p>
 
-    <script>
-        async function login() {
-            const password = document.getElementById("password").value;
-
-            const res = await fetch("/api/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ password })
-            });
-
-            if (res.ok) {
-                window.location.href = "/dashboard";
-            } else {
-                document.getElementById("error").innerText = "Wrong password";
-            }
-        }
-
-        function handleKeyDown(event) {
-            if (event.key === "Enter") {
-                login();
-            }
-        }
-
-        const asciiArt = document.getElementById("ascii-art");
-        const threshold = 30;
-
-        const wrappedText = asciiArt.textContent
-            .split("")
-            .map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`)
-            .join("");
-          asciiArt.innerHTML = wrappedText;
-
-          document.addEventListener("mousemove", (e) => {
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-
-            const chars = document.querySelectorAll(".char");
-
-            chars.forEach(char => {
-              const charRect = char.getBoundingClientRect();
-              const charX = charRect.left + charRect.width / 2;
-              const charY = charRect.top + charRect.height / 2;
-
-              const distance = Math.sqrt(
-                Math.pow(mouseX - charX, 2) + Math.pow(mouseY - charY, 2)
-              );
-
-              if (distance < threshold) {
-                char.style.color = "#e4b558";
-                char.style.fontWeight = "bold";
-              } else {
-                char.style.color = "";
-                char.style.fontWeight = "";
-              }
-            });
-          });
-    </script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

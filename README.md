@@ -4,3 +4,5 @@ HomePortal is a self-hosted, password-protected dashboard that serves as a bookm
 
 ## Statistics
 ![Time spent](https://hackatime.hackclub.com/api/v1/badge/U0A1VEB9U1F/poepoepipi/HomePortal)
+
+## How to use

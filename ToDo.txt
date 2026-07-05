@@ -1,2 +1,2 @@
-Make shure users can't go to "/dashboard" manually to prevent needing to log in.
+Make sure users can't go to "/dashboard" manually to prevent needing to log in.
 Don't code the password in the python
